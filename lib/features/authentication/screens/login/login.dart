@@ -31,7 +31,7 @@ class Login extends StatelessWidget {
               LoginForm(),
               // divider
               TDivider(
-                Textt: TTexts.orSignInWith,
+                Textt: TTexts.orSignInWith.capitalize!,
               ),
               const SizedBox(
                 height: TSizes.spaceBtwSections - 1,
