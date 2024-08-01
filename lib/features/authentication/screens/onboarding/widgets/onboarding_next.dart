@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/authentication/controllers/onboarding_controller.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/device_utility.dart';
 
@@ -14,9 +15,12 @@ class nextButton extends StatelessWidget {
         bottom: TDeviceUtils.getBottomNavigationBarHeight(),
         right: TSizes.defaultSpace,
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              OnBoardingController.instance.nextPage();
+            },
             style: ElevatedButton.styleFrom(
-                shape: CircleBorder(), backgroundColor: Colors.black), // fix dark mode here too
+                shape: CircleBorder(),
+                backgroundColor: Colors.black), // fix dark mode here too
             child: Icon(Iconsax.arrow_right_3)));
   }
 }

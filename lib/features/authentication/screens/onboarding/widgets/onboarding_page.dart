@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class OnBoardingWidget extends StatelessWidget {
   OnBoardingWidget({

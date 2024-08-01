@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:t_store/features/authentication/screens/widgets/onboarding_next.dart';
-import 'package:t_store/features/authentication/screens/widgets/onboarding_page.dart';
-import 'package:t_store/features/authentication/screens/widgets/onboarding_skip.dart';
-import 'package:t_store/features/authentication/screens/widgets/page_dot.dart';
+import 'package:t_store/features/authentication/controllers/onboarding_controller.dart';
+import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_next.dart';
+import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
+import 'package:t_store/features/authentication/screens/onboarding/widgets/page_dot.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -18,10 +20,13 @@ class OnboardingScreen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
     return Scaffold(
       body: Stack(
         children: [
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: [
               OnBoardingWidget(
                 image: TImages.onBoardingImage1,
@@ -48,4 +53,3 @@ class OnboardingScreen1 extends StatelessWidget {
     );
   }
 }
-
