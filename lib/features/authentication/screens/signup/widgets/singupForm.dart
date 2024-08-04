@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/formDivider.dart';
-import 'package:t_store/common/widgets/socialButtons.dart';
+import 'package:t_store/common/widgets/Login_signup/formDivider.dart';
+import 'package:t_store/common/widgets/Login_signup/socialButtons.dart';
+import 'package:t_store/features/authentication/screens/signup/verifyEmail.dart';
 import 'package:t_store/features/authentication/screens/signup/widgets/TermsAndConditions.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -24,8 +25,7 @@ class TSignupForm extends StatelessWidget {
                 child: TextFormField(
               expands: false,
               decoration: const InputDecoration(
-                  labelText: TTexts.firstName,
-                  prefixIcon: Icon(Iconsax.user)),
+                  labelText: TTexts.firstName, prefixIcon: Icon(Iconsax.user)),
             )),
             const SizedBox(
               width: TSizes.spaceBtwInputFields,
@@ -34,32 +34,29 @@ class TSignupForm extends StatelessWidget {
                 child: TextFormField(
               expands: false,
               decoration: const InputDecoration(
-                  labelText: TTexts.lastName,
-                  prefixIcon: Icon(Iconsax.user)),
+                  labelText: TTexts.lastName, prefixIcon: Icon(Iconsax.user)),
             )),
           ],
         ),
         const SizedBox(
           height: TSizes.spaceBtwInputFields,
         ),
-    
+
         // username
-    
+
         TextFormField(
           expands: false,
           decoration: const InputDecoration(
-              labelText: TTexts.username,
-              prefixIcon: Icon(Iconsax.user_edit)),
+              labelText: TTexts.username, prefixIcon: Icon(Iconsax.user_edit)),
         ),
         const SizedBox(
           height: TSizes.spaceBtwInputFields,
         ),
-    
+
         TextFormField(
           expands: false,
           decoration: const InputDecoration(
-              labelText: TTexts.phoneNo,
-              prefixIcon: Icon(Iconsax.call)),
+              labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
         ),
         const SizedBox(
           height: TSizes.spaceBtwInputFields,
@@ -75,19 +72,21 @@ class TSignupForm extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwInputFields,
         ),
-    
+
         // terms and conditions
-    
+
         TermsandConditons(),
         const SizedBox(
           height: TSizes.spaceBtwSections,
         ),
-    
+
         // Sign up button
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const VerifyemailScreen());
+              },
               child: const Text(TTexts.createAccount)),
         ),
         const SizedBox(
@@ -97,4 +96,3 @@ class TSignupForm extends StatelessWidget {
     ));
   }
 }
-
