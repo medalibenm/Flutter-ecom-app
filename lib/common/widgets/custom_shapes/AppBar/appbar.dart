@@ -4,7 +4,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
-class TAppBar extends StatelessWidget {
+class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TAppBar(
       {super.key,
       this.title,
@@ -17,6 +17,9 @@ class TAppBar extends StatelessWidget {
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final VoidCallbackAction? leadingOnPressed;
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {

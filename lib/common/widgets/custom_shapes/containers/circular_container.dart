@@ -4,16 +4,18 @@ import 'package:t_store/utils/constants/colors.dart';
 class TCircularContainer extends StatelessWidget {
   const TCircularContainer({
     super.key,
-    this.width = 400,
-    this.height = 400,
-    this.radius = 400,
-    this.padding = 0,
+    this.width,
+    this.height,
+    this.radius,
+    this.padding,
     this.child,
     this.backgroundColor = TColors.white,
+    this.margin,
   });
   final double? width, height;
-  final double radius, padding;
+  final BorderRadius? radius;
   final Widget? child;
+  final EdgeInsets? margin, padding;
   final Color backgroundColor;
 
   @override
@@ -21,10 +23,11 @@ class TCircularContainer extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      padding: EdgeInsets.all(padding),
+      margin: margin,
+      padding: padding,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(radius),
-        color: backgroundColor.withOpacity(0.1),
+        borderRadius: radius,
+        color: backgroundColor,
       ),
       child: child,
     );

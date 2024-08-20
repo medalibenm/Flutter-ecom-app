@@ -24,14 +24,14 @@ class HomeHeader extends StatelessWidget {
                 top: -150,
                 right: -250,
                 child: TCircularContainer(
-                  backgroundColor: TColors.textWhite,
+                  backgroundColor: TColors.textWhite.withOpacity(0.1),
                 ),
               ),
               Positioned(
                 top: 100,
                 right: -300,
                 child: TCircularContainer(
-                  backgroundColor: TColors.textWhite,
+                  backgroundColor: TColors.textWhite.withOpacity(0.1),
                 ),
               ),
               child,
