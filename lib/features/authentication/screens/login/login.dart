@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/Login_signup/formDivider.dart';
 import 'package:t_store/common/widgets/Login_signup/socialButtons.dart';
 import 'package:t_store/features/authentication/screens/login/widgets/LoginForm.dart';
 import 'package:t_store/features/authentication/screens/login/widgets/LoginHeader.dart';
-import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -18,7 +15,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
               top: TSizes.appBarHeight,
               left: TSizes.defaultSpace,
               bottom: TSizes.defaultSpace,
@@ -26,9 +23,9 @@ class Login extends StatelessWidget {
           child: Column(
             children: [
               // logo and text
-              LoginHeader(),
+              const LoginHeader(),
               // form
-              LoginForm(),
+              const LoginForm(),
               // divider
               TDivider(
                 Textt: TTexts.orSignInWith.capitalize!,
@@ -37,7 +34,7 @@ class Login extends StatelessWidget {
                 height: TSizes.spaceBtwSections - 1,
               ),
               // Footer
-              TSocials()
+              const TSocials()
             ],
           ),
         ),

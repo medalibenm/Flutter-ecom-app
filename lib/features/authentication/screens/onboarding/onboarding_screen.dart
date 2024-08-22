@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:t_store/features/authentication/controllers/onboarding_controller.dart';
 import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_next.dart';
 import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:t_store/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:t_store/features/authentication/screens/onboarding/widgets/page_dot.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
-import 'package:t_store/utils/device/device_utility.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class OnboardingScreen1 extends StatelessWidget {
   const OnboardingScreen1({super.key});
@@ -27,7 +20,7 @@ class OnboardingScreen1 extends StatelessWidget {
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
-            children: [
+            children: const [
               OnBoardingWidget(
                 image: TImages.onBoardingImage1,
                 titlem: TTexts.onBoardingTitle1,

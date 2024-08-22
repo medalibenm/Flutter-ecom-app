@@ -4,7 +4,6 @@ import 'package:t_store/features/authentication/controllers/onboarding_controlle
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/device_utility.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class page_dot extends StatelessWidget {
   const page_dot({
@@ -14,7 +13,6 @@ class page_dot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = OnBoardingController.instance;
-    final dark = THelperFunctions.isDarkMode(context);
     const Color colordots = TColors.dark;
     // to do : fix t3 dark light mode
     return Positioned(

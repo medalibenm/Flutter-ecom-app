@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {

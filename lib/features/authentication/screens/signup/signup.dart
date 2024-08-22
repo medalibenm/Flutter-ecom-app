@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/Login_signup/formDivider.dart';
 import 'package:t_store/common/widgets/Login_signup/socialButtons.dart';
 import 'package:t_store/features/authentication/screens/signup/widgets/singupForm.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -17,7 +15,7 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -29,7 +27,7 @@ class SignupScreen extends StatelessWidget {
                 height: TSizes.spaceBtwSections,
               ),
               // Form
-              TSignupForm(),
+              const TSignupForm(),
               TDivider(Textt: TTexts.orSignInWith.capitalize!),
               const SizedBox(
                 height: TSizes.spaceBtwSections,

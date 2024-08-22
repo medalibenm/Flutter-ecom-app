@@ -5,7 +5,7 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 class OnBoardingWidget extends StatelessWidget {
-  OnBoardingWidget({
+  const OnBoardingWidget({
     super.key,
     required this.image,
     required this.titlem,

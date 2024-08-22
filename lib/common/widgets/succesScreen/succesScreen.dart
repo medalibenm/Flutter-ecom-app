@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:t_store/features/authentication/screens/login/login.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -16,7 +13,7 @@ class SuccesScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(TSizes.defaultSpace, TSizes.appBarHeight,
+          padding: const EdgeInsets.fromLTRB(TSizes.defaultSpace, TSizes.appBarHeight,
                   TSizes.defaultSpace, TSizes.defaultSpace) *
               2,
           child: Column(

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/text_strings.dart';
 
 class TDivider extends StatelessWidget {
   const TDivider({
@@ -14,7 +12,7 @@ class TDivider extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Flexible(
+        const Flexible(
           child: Divider(
             color: TColors.darkGrey,
             thickness: 0.5,
@@ -26,7 +24,7 @@ class TDivider extends StatelessWidget {
           Textt,
           style: Theme.of(context).textTheme.labelMedium,
         ),
-        Flexible(
+        const Flexible(
           child: Divider(
             color: TColors.darkGrey,
             thickness: 0.5,

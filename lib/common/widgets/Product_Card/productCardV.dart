@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadow.dart';
-import 'package:t_store/common/widgets/Timages/verticalimages.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:t_store/common/widgets/icons/t_circularIcon.dart';
 import 'package:t_store/common/widgets/rounded_image.dart';
 import 'package:t_store/common/widgets/texts/brand_title_with_icon.dart';
 import 'package:t_store/common/widgets/texts/producttitle.dart';
+import 'package:t_store/features/shop/screens/product_details/product_details.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -21,7 +20,7 @@ class TProductCardV extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -34,11 +33,11 @@ class TProductCardV extends StatelessWidget {
             TCircularContainer(
               height: 180,
               radius: BorderRadius.circular(TSizes.sm),
-              padding: EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: TColors.light,
               child: Stack(
                 children: [
-                  TRoundedImage(
+                  const TRoundedImage(
                     padding: EdgeInsets.all(5),
                     imageUrl: TImages.productImage1,
                     applyImageRadius: true,
@@ -61,7 +60,7 @@ class TProductCardV extends StatelessWidget {
                   ),
 
                   // favorite icon button
-                  Positioned(
+                  const Positioned(
                       top: 0,
                       right: 0,
                       child: TCircularIcon(
@@ -71,8 +70,8 @@ class TProductCardV extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -89,7 +88,7 @@ class TProductCardV extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -104,17 +103,17 @@ class TProductCardV extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: TColors.dark,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(TSizes.cardRadiusMd),
                           bottomRight:
                               Radius.circular(TSizes.productImageRadius))),
-                  child: SizedBox(
+                  child: const SizedBox(
                     height: TSizes.iconLg * 1.2,
                     width: TSizes.iconLg * 1.2,
                     child: Center(
-                      child: const Icon(
+                      child: Icon(
                         Iconsax.add,
                         color: TColors.white,
                       ),

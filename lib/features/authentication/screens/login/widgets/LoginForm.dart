@@ -21,7 +21,7 @@ class LoginForm extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: TTexts.email),
           ),
@@ -29,7 +29,7 @@ class LoginForm extends StatelessWidget {
             height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash)),

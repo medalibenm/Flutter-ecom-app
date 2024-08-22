@@ -19,8 +19,8 @@ class nextButton extends StatelessWidget {
               OnBoardingController.instance.nextPage();
             },
             style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
+                shape: const CircleBorder(),
                 backgroundColor: Colors.black), // fix dark mode here too
-            child: Icon(Iconsax.arrow_right_3)));
+            child: const Icon(Iconsax.arrow_right_3)));
   }
 }

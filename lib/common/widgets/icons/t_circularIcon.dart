@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -20,7 +19,7 @@ class TCircularIcon extends StatelessWidget {
   final IconData icon;
   final Color? color;
   final Color? backgroundColor;
-  final VoidCallbackAction? onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +35,9 @@ class TCircularIcon extends StatelessWidget {
                 : TColors.white.withOpacity(0.9),
       ),
       child: IconButton(
-          onPressed: () {
-            onPressed;
-          },
+          onPressed:
+            onPressed
+          ,
           icon: Icon(icon,color: color,size: size,),
       ),
     );

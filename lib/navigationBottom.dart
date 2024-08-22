@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/personalisation/screens/settings/settings.dart';
 import 'package:t_store/features/shop/screens/home/homeApp.dart';
 import 'package:t_store/features/shop/screens/store/store.dart';
+import 'package:t_store/features/shop/screens/wishlist/wishlist.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -40,11 +40,7 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const Store(),
-    Container(
-      color: Colors.yellow,
-    ),
-    Container(
-      color: Colors.blue,
-    ),
+    const Wishlist(),
+    const SettingPage(),
   ];
 }

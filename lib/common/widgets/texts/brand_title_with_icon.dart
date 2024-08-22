@@ -36,10 +36,10 @@ class TBrandTitle extends StatelessWidget {
             brandtextsize: brandtextsize,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: TSizes.xs,
         ),
-        Icon(
+        const Icon(
           Iconsax.verify5,
           color: TColors.primary,
           size: TSizes.iconXs,

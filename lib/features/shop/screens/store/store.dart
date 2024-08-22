@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/common/widgets/Timages/tcircularimage.dart';
+import 'package:t_store/common/TabBar.dart';
+import 'package:t_store/common/brandcard.dart';
+import 'package:t_store/common/layout/grid.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/SearchBar.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:t_store/common/widgets/product_cart/cart_menuicon.dart';
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';
-import 'package:t_store/features/shop/screens/home/widgets/Home_appBar.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+
+import '../../../../common/t_category_tab.dart';
 
 class Store extends StatelessWidget {
   const Store({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TAppBar(
-        title: Text('Store'),
-        actions: [
-          CartCounterIcon(
-            iconColor: Colors.black,
-          ),
-        ],
-      ),
-      body: NestedScrollView(
-          body: Row(),
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: const TAppBar(
+          title: Text('Store'),
+          actions: [
+            CartCounterIcon(
+              iconColor: Colors.black,
+            ),
+          ],
+        ),
+        body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
             return [
               SliverAppBar(
@@ -40,16 +42,16 @@ class Store extends StatelessWidget {
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: TSizes.spaceBtwItems,
                         ),
-                        TSearchContainer(
+                        const TSearchContainer(
                           text: 'Search in Store',
                           showBorder: true,
                           showBackground: false,
                           padding: EdgeInsets.zero,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: TSizes.spaceBtwItems,
                         ),
 
@@ -64,26 +66,47 @@ class Store extends StatelessWidget {
                         const SizedBox(
                           height: TSizes.spaceBtwItems / 1.5,
                         ),
-                        TCircularContainer(
-                            padding: const EdgeInsets.all(TSizes.sm),
-                            backgroundColor: Colors.transparent,
-                            child: Row(children: [
-                              TCircularImage(
-                                isNetworkImage: false,
-                                image: TImages.clothIcon,
-                                backgroundColor: Colors.transparent,
-                                overlayColor: TColors.dark,
-                              ),
-                            ])),
-                            const SizedBox(),
-
-                            //! Text
-                            
+                        TGridLayout(
+                            itemCount: 4,
+                            mainAxisExtent: 80,
+                            itemBuilder: (_, index) {
+                              return const TBrandCard(
+                                showborder: true,
+                              );
+                            })
                       ]),
+                ),
+                bottom: const TTabBar(
+                  tabs: [
+                    Tab(
+                      child: Text('Sports'),
+                    ),
+                    Tab(
+                      child: Text('Furniture'),
+                    ),
+                    Tab(
+                      child: Text('Electronics'),
+                    ),
+                    Tab(
+                      child: Text('Clothes'),
+                    ),
+                    Tab(
+                      child: Text('Cosmetics'),
+                    ),
+                  ],
                 ),
               ),
             ];
-          }),
+          },
+          body: const TabBarView(children: [
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+          ]),
+        ),
+      ),
     );
   }
 }
