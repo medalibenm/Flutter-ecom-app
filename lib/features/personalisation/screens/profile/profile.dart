@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/Timages/tcircularimage.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/listTile/settingmenuTile.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
