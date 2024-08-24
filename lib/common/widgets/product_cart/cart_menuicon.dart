@@ -8,7 +8,7 @@ class CartCounterIcon extends StatelessWidget {
     this.onPressed,
     this.iconColor,
   });
-  final VoidCallbackAction? onPressed;
+  final void Function()? onPressed;
   // ignore: non_constant_identifier_names
   final Color? iconColor;
 
@@ -17,7 +17,7 @@ class CartCounterIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-            onPressed: () => onPressed,
+            onPressed: onPressed,
             icon: Icon(
               Iconsax.shopping_bag,
               color: iconColor,

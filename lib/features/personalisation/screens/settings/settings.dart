@@ -5,6 +5,7 @@ import 'package:t_store/common/listTile/settingmenuTile.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';
+import 'package:t_store/features/personalisation/screens/address/address.dart';
 import 'package:t_store/features/personalisation/screens/profile/profile.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -56,10 +57,10 @@ class SettingPage extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.spaceBtwItems,
                 ),
-                const SettingTile(
+                SettingTile(
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
-                    subtitle: 'Set shopping delivery address'),
+                    subtitle: 'Set shopping delivery address',ontap: () => Get.to(() => const UserAddressScreen()),),
                 const SettingTile(
                     icon: Iconsax.shopping_cart,
                     title: 'My Cart',

@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
+import 'package:t_store/common/widgets/icons/t_circularIcon.dart';
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/add_to_cartBottom.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/attributes.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
+import 'package:t_store/features/shop/screens/product_reviews/productReviews.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 // import 'package:readmore/readmore.dart';
@@ -85,7 +89,9 @@ class ProductDetail extends StatelessWidget {
                       textColor: TColors.dark,
                     ),
                     IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => const ProductReviewScreen());
+                        },
                         icon: const Icon(
                           Iconsax.arrow_right_3,
                           size: 18,
