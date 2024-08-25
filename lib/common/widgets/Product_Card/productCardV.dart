@@ -66,7 +66,7 @@ class TProductCardV extends StatelessWidget {
                       child: TCircularIcon(
                         icon: Iconsax.heart5,
                         color: Colors.red,
-                      ))
+                      )),
                 ],
               ),
             ),
@@ -119,7 +119,7 @@ class TProductCardV extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             )
           ],

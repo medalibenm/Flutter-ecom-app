@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets/custom_shapes/containers/primary_header_c
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';
 import 'package:t_store/features/personalisation/screens/address/address.dart';
 import 'package:t_store/features/personalisation/screens/profile/profile.dart';
+import 'package:t_store/features/shop/screens/order/order.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -58,17 +59,21 @@ class SettingPage extends StatelessWidget {
                   height: TSizes.spaceBtwItems,
                 ),
                 SettingTile(
-                    icon: Iconsax.safe_home,
-                    title: 'My Addresses',
-                    subtitle: 'Set shopping delivery address',ontap: () => Get.to(() => const UserAddressScreen()),),
+                  icon: Iconsax.safe_home,
+                  title: 'My Addresses',
+                  subtitle: 'Set shopping delivery address',
+                  ontap: () => Get.to(() => const UserAddressScreen()),
+                ),
                 const SettingTile(
                     icon: Iconsax.shopping_cart,
                     title: 'My Cart',
                     subtitle: 'Add, remove products and move to checkout'),
-                const SettingTile(
-                    icon: Iconsax.bag_tick,
-                    title: 'My Orders',
-                    subtitle: 'In progress and Completed Orders'),
+                SettingTile(
+                  icon: Iconsax.bag_tick,
+                  title: 'My Orders',
+                  subtitle: 'In progress and Completed Orders',
+                  ontap: () => Get.to(() => const OrderScreen()),
+                ),
                 const SettingTile(
                     icon: Iconsax.bank,
                     title: 'Bank Account',
