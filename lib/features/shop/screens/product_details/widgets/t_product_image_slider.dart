@@ -19,7 +19,7 @@ class TProductImageSlider extends StatelessWidget {
       child: Container(
         child: Stack(
           children: [
-            TAppBar(
+            const TAppBar(
               showBackarrow: true,
               actions: [
                 TCircularIcon(
@@ -28,10 +28,10 @@ class TProductImageSlider extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 400,
               child: Padding(
-                padding: const EdgeInsets.all(TSizes.productImageRadius * 2),
+                padding: EdgeInsets.all(TSizes.productImageRadius * 2),
                 child: Center(
                     child: Image(image: AssetImage(TImages.productImage1))),
               ),

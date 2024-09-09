@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/features/shop/screens/product_reviews/widgets/userReviewCard.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/device/device_utility.dart';
 
 import 'widgets/t_overrall_review.dart';
 import 'widgets/t_rating_bar_indicator.dart';
-import 'widgets/t_rating_progress_indicator.dart';
 
 class ProductReviewScreen extends StatelessWidget {
   const ProductReviewScreen({super.key});
@@ -17,7 +12,7 @@ class ProductReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: const TAppBar(
         title: Text(
           'Reviews and Ratings',
         ),
@@ -25,7 +20,7 @@ class ProductReviewScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -34,8 +29,8 @@ class ProductReviewScreen extends StatelessWidget {
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
-              TOverrallReview(),
-              TRatingBarIndicator(
+              const TOverrallReview(),
+              const TRatingBarIndicator(
                 rating: 3.5,
               ),
               Text(
@@ -45,8 +40,8 @@ class ProductReviewScreen extends StatelessWidget {
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
-              UserReviewCard(),
-              UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
             ],
           ),
         ),

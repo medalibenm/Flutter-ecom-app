@@ -72,7 +72,7 @@ class TProductMetaData extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
-        Row(
+        const Row(
           children: [
             TCircularImage(
               image: TImages.cosmeticsIcon,

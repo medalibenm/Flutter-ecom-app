@@ -17,14 +17,14 @@ class TOrderListItems extends StatelessWidget {
       itemBuilder: (_, index) => TRoundedContainer(
         showborder: true,
         backgroundcolor: TColors.light,
-        padding: EdgeInsets.all(TSizes.md),
+        padding: const EdgeInsets.all(TSizes.md),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(
               children: [
-                Icon(Iconsax.ship),
-                SizedBox(
+                const Icon(Iconsax.ship),
+                const SizedBox(
                   width: TSizes.spaceBtwItems / 2,
                 ),
                 Expanded(
@@ -48,13 +48,13 @@ class TOrderListItems extends StatelessWidget {
                 ),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Iconsax.arrow_right_34,
                       size: TSizes.iconSm,
                     ))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwItems,
             ),
             Row(
@@ -62,8 +62,8 @@ class TOrderListItems extends StatelessWidget {
                 Expanded(
                   child: Row(
                     children: [
-                      Icon(Iconsax.tag),
-                      SizedBox(
+                      const Icon(Iconsax.tag),
+                      const SizedBox(
                         width: TSizes.spaceBtwItems / 2,
                       ),
                       Expanded(
@@ -82,7 +82,7 @@ class TOrderListItems extends StatelessWidget {
                       ),
                       IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Iconsax.arrow_right_34,
                             size: TSizes.iconSm,
                           ))
@@ -92,8 +92,8 @@ class TOrderListItems extends StatelessWidget {
                 Expanded(
                   child: Row(
                     children: [
-                      Icon(Iconsax.calendar),
-                      SizedBox(
+                      const Icon(Iconsax.calendar),
+                      const SizedBox(
                         width: TSizes.spaceBtwItems / 2,
                       ),
                       Expanded(

@@ -49,7 +49,7 @@ class TSingleAddress extends StatelessWidget {
               const SizedBox(
                 height: TSizes.sm / 2,
               ),
-              Text(
+              const Text(
                 '82345 Timmy Coves, South Liana, 87665, USA',
                 softWrap: true,
               ),

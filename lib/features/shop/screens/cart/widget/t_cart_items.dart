@@ -17,18 +17,18 @@ class TCartItems extends StatelessWidget {
         shrinkWrap: true,
         itemBuilder: (_, index) => Column(
               children: [
-                TCartItem(),
+                const TCartItem(),
                 if (showAddRemoveButtons)
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
                 if (showAddRemoveButtons)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
+                      const Row(
                         children: [
-                          const SizedBox(
+                          SizedBox(
                             width: 70,
                           ),
                           TProductAddRemove(),

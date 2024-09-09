@@ -15,11 +15,11 @@ class TCartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        TRoundedImage(
+        const TRoundedImage(
           imageUrl: TImages.productImage1,
           width: 60,
           height: 60,
-          padding: const EdgeInsets.all(TSizes.sm),
+          padding: EdgeInsets.all(TSizes.sm),
           backgroundColor: TColors.light,
         ),
         const SizedBox(

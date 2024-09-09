@@ -21,12 +21,12 @@ class ProductAttributes extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  TSectionHeading(
+                  const TSectionHeading(
                     title: 'Variation',
                     showActionButton: false,
                     textColor: TColors.dark,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: TSizes.spaceBtwItems,
                   ),
                   Column(
@@ -80,7 +80,7 @@ class ProductAttributes extends StatelessWidget {
                   ),
                 ],
               ),
-              TProductTitleText(
+              const TProductTitleText(
                 title:
                     'This is the Description of the Product and it can go upto max 4 lines',
                 smallSize: true,

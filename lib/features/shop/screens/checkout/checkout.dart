@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/roundedContainer.dart';
-import 'package:t_store/common/widgets/rounded_image.dart';
 import 'package:t_store/common/widgets/succesScreen/succesScreen.dart';
 import 'package:t_store/features/shop/screens/cart/widget/t_cart_items.dart';
 import 'package:t_store/features/shop/screens/checkout/widget/billing_amount_section.dart';
@@ -34,7 +33,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                   ));
             },
-            child: Text('Checkout \$256.0')),
+            child: const Text('Checkout \$256.0')),
       ),
       appBar: TAppBar(
         showBackarrow: true,
@@ -43,9 +42,9 @@ class CheckoutScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               TCartItems(
@@ -55,7 +54,7 @@ class CheckoutScreen extends StatelessWidget {
                 height: TSizes.spaceBtwSections,
               ),
               TCouponCode(),
-              const SizedBox(
+              SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
               //! billing infos
@@ -66,16 +65,16 @@ class CheckoutScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     BillingAmount(),
-                    const SizedBox(
+                    SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
-                    const Divider(),
-                    const SizedBox(
+                    Divider(),
+                    SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
                     //! payments methods
                     BillingPayment(),
-                    const SizedBox(
+                    SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
 

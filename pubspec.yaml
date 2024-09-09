@@ -31,11 +31,15 @@ dependencies:
 
   # Product Specific
   readmore: ^3.0.0
-  carousel_slider: ^4.2.1
+  carousel_slider:
+    git:
+      url: https://github.com/sampaio96/flutter_carousel_slider.git
+      ref: master
   flutter_rating_bar: ^4.0.1
   capped_progress_indicator: ^0.0.2
   firebase_storage: ^11.6.0
   connectivity_plus: ^5.0.2
+  firebase_core: ^2.24.2
 
 
 

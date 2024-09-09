@@ -17,7 +17,7 @@ class BillingAddress extends StatelessWidget {
           onPressed: () {},
           textColor: TColors.dark,
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
         Text(
@@ -40,7 +40,7 @@ class BillingAddress extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
         Row(
@@ -59,7 +59,7 @@ class BillingAddress extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
       ],

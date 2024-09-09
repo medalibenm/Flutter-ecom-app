@@ -44,7 +44,7 @@ class SubCategories extends StatelessWidget {
                     height: 120,
                     child: ListView.separated(
                       itemBuilder: (context, index) => const TProductCardH(),
-                      separatorBuilder: (context, index) => SizedBox(
+                      separatorBuilder: (context, index) => const SizedBox(
                         width: TSizes.spaceBtwItems,
                       ),
                       itemCount: 4,

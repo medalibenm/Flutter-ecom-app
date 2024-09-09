@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/common/layout/grid.dart';
-import 'package:t_store/common/widgets/Product_Card/productCardV.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -11,14 +9,14 @@ class AllProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: TAppBar(
         title: Text('Popular Products'),
         showBackarrow: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          padding: EdgeInsets.all(TSizes.defaultSpace),
           child: TSortableProducts(),
         ),
       ),

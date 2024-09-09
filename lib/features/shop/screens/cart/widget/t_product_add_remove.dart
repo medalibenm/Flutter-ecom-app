@@ -14,7 +14,7 @@ class TProductAddRemove extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        TCircularIcon(
+        const TCircularIcon(
           icon: Iconsax.minus,
           width: 32,
           height: 32,
@@ -32,7 +32,7 @@ class TProductAddRemove extends StatelessWidget {
         const SizedBox(
           width: TSizes.spaceBtwItems,
         ),
-        TCircularIcon(
+        const TCircularIcon(
           icon: Iconsax.add,
           width: 32,
           height: 32,

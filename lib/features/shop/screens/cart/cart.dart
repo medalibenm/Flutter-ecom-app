@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
-import 'package:t_store/common/widgets/icons/t_circularIcon.dart';
-import 'package:t_store/common/widgets/rounded_image.dart';
-import 'package:t_store/common/widgets/texts/brand_title_with_icon.dart';
-import 'package:t_store/common/widgets/texts/producttitle.dart';
 import 'package:t_store/features/shop/screens/checkout/checkout.dart';
-import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
-import 'widget/t_cart_item.dart';
 import 'widget/t_cart_items.dart';
-import 'widget/t_product_add_remove.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -28,7 +19,7 @@ class CartScreen extends StatelessWidget {
             onPressed: () {
               Get.to(() => const CheckoutScreen());
             },
-            child: Text('Checkout \$256.0')),
+            child: const Text('Checkout \$256.0')),
       ),
       appBar: TAppBar(
         title: Text(
@@ -37,8 +28,8 @@ class CartScreen extends StatelessWidget {
         ),
         showBackarrow: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+      body: const Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
         child: TCartItems(),
       ),
     );

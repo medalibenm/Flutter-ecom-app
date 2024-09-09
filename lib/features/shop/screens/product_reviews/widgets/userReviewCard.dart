@@ -51,7 +51,7 @@ class UserReviewCard extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwItems,
         ),
-        Text(
+        const Text(
             'Nam elit diam, venenatis eget metus ac, mollis ultricies elit. Nunc eget justo augue. Sed et finibus ante.'),
         const SizedBox(
           height: TSizes.spaceBtwItems,

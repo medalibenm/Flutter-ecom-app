@@ -9,7 +9,7 @@ class AddAdress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: const TAppBar(
         showBackarrow: true,
         title: Text('Add New Address'),
       ),
@@ -93,7 +93,7 @@ class AddAdress extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text('Save'),
+                  child: const Text('Save'),
                 ),
               )
             ],

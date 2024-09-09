@@ -20,7 +20,7 @@ class TChoiceChip extends StatelessWidget {
       selected: selected,
       onSelected: onselected,
       labelStyle: TextStyle(color: selected ? TColors.white : null),
-      shape: THelperFunctions.getColor(text) != null ? CircleBorder() : null,
+      shape: THelperFunctions.getColor(text) != null ? const CircleBorder() : null,
       avatar: THelperFunctions.getColor(text) != null
           ? TCircularContainer(
               width: 50,
@@ -33,9 +33,7 @@ class TChoiceChip extends StatelessWidget {
       padding: THelperFunctions.getColor(text) != null
           ? const EdgeInsets.all(0)
           : null,
-      backgroundColor: THelperFunctions.getColor(text) != null
-          ? THelperFunctions.getColor(text)!
-          : null,
+      backgroundColor: THelperFunctions.getColor(text),
       selectedColor: Colors.green,
     );
   }

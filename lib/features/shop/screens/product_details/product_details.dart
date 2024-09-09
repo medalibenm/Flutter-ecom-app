@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
-import 'package:t_store/common/widgets/icons/t_circularIcon.dart';
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/add_to_cartBottom.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/attributes.dart';
@@ -21,11 +19,11 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: TBottomAddToCart(),
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TProductImageSlider(),
+            const TProductImageSlider(),
 
             //! product details
             Padding(
@@ -34,13 +32,13 @@ class ProductDetail extends StatelessWidget {
                   left: TSizes.defaultSpace,
                   bottom: TSizes.defaultSpace),
               child: Column(children: [
-                TRatingShare(),
+                const TRatingShare(),
 
                 //! price title stock and brand
-                TProductMetaData(),
+                const TProductMetaData(),
 
                 //!  Attributes
-                ProductAttributes(),
+                const ProductAttributes(),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
@@ -49,7 +47,7 @@ class ProductDetail extends StatelessWidget {
                 SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                        onPressed: () {}, child: Text('Checkout'))),
+                        onPressed: () {}, child: const Text('Checkout'))),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
@@ -83,7 +81,7 @@ class ProductDetail extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TSectionHeading(
+                    const TSectionHeading(
                       title: 'Reviews(199)',
                       showActionButton: false,
                       textColor: TColors.dark,

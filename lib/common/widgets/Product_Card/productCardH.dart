@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/styles/shadow.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/roundedContainer.dart';
 import 'package:t_store/common/widgets/icons/t_circularIcon.dart';
@@ -31,7 +30,7 @@ class TProductCardH extends StatelessWidget {
             backgroundcolor: TColors.light,
             child: Stack(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 120,
                   width: 120,
                   child: TRoundedImage(
@@ -57,7 +56,7 @@ class TProductCardH extends StatelessWidget {
                 ),
 
                 // favorite icon button
-                Positioned(
+                const Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(
@@ -72,10 +71,10 @@ class TProductCardH extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: TSizes.sm, left: TSizes.sm),
+                  padding: const EdgeInsets.only(top: TSizes.sm, left: TSizes.sm),
                   child: Column(
                     children: [
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           TProductTitleText(

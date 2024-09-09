@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:t_store/common/brandcard.dart';
 import 'package:t_store/common/layout/grid.dart';
-import 'package:t_store/common/products/t_sortable_products.dart';
 import 'package:t_store/common/widgets/custom_shapes/AppBar/appbar.dart';
 import 'package:t_store/common/widgets/texts/sectionHeading.dart';
 import 'package:t_store/features/shop/screens/all_brands/brandProducts.dart';
@@ -16,21 +14,21 @@ class AllBrands extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: const TAppBar(
         title: Text('Brand'),
         showBackarrow: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              TSectionHeading(
+              const TSectionHeading(
                 title: 'Brands',
                 showActionButton: true,
                 textColor: TColors.dark,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               TGridLayout(
