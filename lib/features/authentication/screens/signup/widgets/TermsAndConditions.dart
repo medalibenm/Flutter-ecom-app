@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:t_store/features/authentication/controllers/signup_controller.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -10,12 +12,18 @@ class TermsandConditons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = SignupController.instance;
     return Row(
       children: [
         SizedBox(
             height: 24,
             width: 18,
-            child: Checkbox(value: true, onChanged: (value) {})),
+            child: Obx(() => Checkbox(
+                value: controller.privacyPolicy.value,
+                onChanged: (value) {
+                  controller.privacyPolicy.value =
+                      !controller.privacyPolicy.value;
+                }))),
         const SizedBox(
           width: TSizes.spaceBtwItems,
         ),
@@ -25,25 +33,19 @@ class TermsandConditons extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall),
           TextSpan(
               text: '${TTexts.privacyPolicy} ',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .apply(
-                      color: TColors.primary,
-                      decoration: TextDecoration.underline,
-                      decorationColor: TColors.primary)),
+              style: Theme.of(context).textTheme.bodyMedium!.apply(
+                  color: TColors.primary,
+                  decoration: TextDecoration.underline,
+                  decorationColor: TColors.primary)),
           TextSpan(
               text: '${TTexts.and} ',
               style: Theme.of(context).textTheme.bodySmall),
           TextSpan(
               text: '${TTexts.termsOfUse} ',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .apply(
-                      color: TColors.primary,
-                      decoration: TextDecoration.underline,
-                      decorationColor: TColors.primary)),
+              style: Theme.of(context).textTheme.bodyMedium!.apply(
+                  color: TColors.primary,
+                  decoration: TextDecoration.underline,
+                  decorationColor: TColors.primary)),
         ]))
       ],
     );

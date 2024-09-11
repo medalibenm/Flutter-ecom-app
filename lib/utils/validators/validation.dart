@@ -1,5 +1,12 @@
+import 'package:t_store/common/widgets/Product_Card/productCardV.dart';
 
 class TValidator {
+  static String? validateNotEmpty(String? value, String? fieldName) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is Required';
+    }
+  }
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';
