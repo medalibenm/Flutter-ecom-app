@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:t_store/common/widgets/succesScreen/succesScreen.dart';
+import 'package:t_store/data/repositories/authentification_repo.dart';
+import 'package:t_store/features/authentication/controllers/verifyEmail.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -10,16 +12,19 @@ import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class VerifyemailScreen extends StatelessWidget {
-  const VerifyemailScreen({super.key});
+  const VerifyemailScreen({super.key, this.email});
+
+  final String? email;
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VerifyEmailController());
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => const Login()),
+              onPressed: () => AuthentificationRepo.instance.logout(),
               icon: const Icon(CupertinoIcons.clear))
         ],
       ),
@@ -69,18 +74,20 @@ class VerifyemailScreen extends StatelessWidget {
                             title: TTexts.yourAccountCreatedTitle,
                             subTitle: TTexts.yourAccountCreatedSubTitle,
                             image: TImages.staticSuccessIllustration,
-                            onPressed: () => Get.to(() => const Login()),
+                            onPressed: () => AuthentificationRepo.instance.screenRedirect(),
                           ));
                     },
                     child: const Text(TTexts.tContinue),
                   )),
-               const SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               SizedBox(
                   width: double.infinity,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.checkEmailVerificationStatus();
+                    },
                     child: const Text(TTexts.resendEmail),
                   )),
             ],

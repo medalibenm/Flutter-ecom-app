@@ -29,7 +29,7 @@ class SignupController extends GetxController {
     try {
       //Start Loading
       TFullScreenLoader.openLoadingDialog(
-          'We are processing your information...', TImages.animalIcon);
+          'We are processing your information...', TImages.successfulPaymentIcon);
       // verify internet connection
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {
@@ -78,7 +78,7 @@ class SignupController extends GetxController {
           message: 'Your account has been created! Verify email to continue..');
 
       // move to verify email screen
-      Get.to(() => const VerifyemailScreen());
+      Get.to(() => VerifyemailScreen(email:email.text.trim() ,));
     } catch (e) {
       TFullScreenLoader.stopLoading();
       TLoaders.errorsnackBar(title: 'Oh Snap!', message: e.toString());
